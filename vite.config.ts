@@ -5,9 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/geracv/',
+  base: '/',
   build: {
-    sourcemap: true,
+    outDir: 'dist', // Diretório onde os arquivos de build serão gerados
   },
   server: {
     host: "::",

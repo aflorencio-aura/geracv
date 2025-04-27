@@ -19,13 +19,11 @@ const App = () => (
         <ResumeProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter basename="/">
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/criar-curriculo" element={<Index />} />
               <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
+            </Routes>          
         </ResumeProvider>
       </LanguageProvider>
     </TooltipProvider>

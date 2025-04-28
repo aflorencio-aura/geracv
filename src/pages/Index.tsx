@@ -5,7 +5,6 @@ import ResumePreview from '@/components/resume/ResumePreview';
 import { ResumeHeader } from '@/components/resume/ResumeHeader';
 import { ResumeFormTabs } from '@/components/resume/ResumeFormTabs';
 import { PreviewToggle } from '@/components/resume/PreviewToggle';
-import AdPlaceholder from '@/components/ads/AdPlaceholder';
 
 const ResumeBuilder = () => {
   const [activeTab, setActiveTab] = useState('personal');
@@ -20,9 +19,6 @@ const ResumeBuilder = () => {
       <ResumeHeader showPreview={showPreview} togglePreview={togglePreview} />
 
       <main className="container mx-auto py-6 px-4">
-        {/* Top Ad Space */}
-        <AdPlaceholder slot="content" />
-
         <div className="flex flex-col md:flex-row gap-8">
           <div className={`w-full ${showPreview ? 'md:w-1/2' : 'md:w-3/4'} mx-auto`}>
             <PreviewToggle showPreview={showPreview} togglePreview={togglePreview} />
@@ -30,9 +26,6 @@ const ResumeBuilder = () => {
             {!showPreview || window.innerWidth >= 768 ? (
               <ResumeFormTabs activeTab={activeTab} setActiveTab={setActiveTab} />
             ) : null}
-
-            {/* Bottom Ad Space */}
-            <AdPlaceholder slot="footer" />
           </div>
 
           {(showPreview || window.innerWidth >= 768) && (
@@ -53,8 +46,6 @@ const ResumeBuilder = () => {
           <p className="text-sm text-muted-foreground">
             Made with ❤️
           </p>
-          {/* Footer Ad Space */}
-          <AdPlaceholder slot="footer" />
         </div>
       </footer>
     </div>

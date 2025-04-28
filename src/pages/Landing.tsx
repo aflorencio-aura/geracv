@@ -4,7 +4,6 @@ import { FileText, Check, Download, Users, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
-import AdPlaceholder from "@/components/ads/AdPlaceholder";
 
 const Landing = () => {
   const { t } = useLanguage();
@@ -29,8 +28,6 @@ const Landing = () => {
         </Link>
       </div>
 
-      {/* Ad Space after Hero */}
-      <AdPlaceholder slot="content" />
 
       {/* SEO Text Block */}
       <div className="bg-white py-16">
@@ -43,8 +40,7 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* Ad Space before Benefits */}
-      <AdPlaceholder slot="content" />
+
 
       {/* Benefits Section */}
       <div className="py-20 bg-accent/30">
@@ -95,9 +91,6 @@ const Landing = () => {
           </Link>
         </div>
       </div>
-
-      {/* Ad Space before FAQ */}
-      <AdPlaceholder slot="content" />
 
       {/* FAQ Section */}
       <div className="py-20 bg-accent/30">
